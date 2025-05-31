@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,25 +15,48 @@ export default function Contact() {
     subject: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     
-    // Create mailto link with form data
-    const mailtoLink = `mailto:bhavyamanasap@mail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
-    
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Opening email client...",
-      description: "Your default email client should open with the message pre-filled.",
-    });
-    
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const result = await emailjs.send(
+        'service_ix4hozl', // service ID
+        'template_kfn2h0i', // template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'bhavyamanasap@mail.com'
+        },
+        'kcnmH8ywDeOXKlPN8' // public key
+      );
+
+      console.log('Email sent successfully:', result);
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -161,6 +185,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="bg-dark-card border-gray-600 focus:border-cyan-400"
                     placeholder="John Doe"
+                    disabled={isLoading}
                   />
                 </div>
                 
@@ -177,6 +202,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="bg-dark-card border-gray-600 focus:border-cyan-400"
                     placeholder="john@example.com"
+                    disabled={isLoading}
                   />
                 </div>
               </div>
@@ -194,6 +220,7 @@ export default function Contact() {
                   onChange={handleChange}
                   className="bg-dark-card border-gray-600 focus:border-cyan-400"
                   placeholder="Project Inquiry / Collaboration"
+                  disabled={isLoading}
                 />
               </div>
 
@@ -210,15 +237,17 @@ export default function Contact() {
                   rows={6}
                   className="bg-dark-card border-gray-600 focus:border-cyan-400 resize-none"
                   placeholder="Tell me about your project or how I can help..."
+                  disabled={isLoading}
                 />
               </div>
 
               <Button 
                 type="submit" 
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3"
+                disabled={isLoading}
               >
                 <Send className="h-4 w-4 mr-2" />
-                Send Message
+                {isLoading ? "Sending..." : "Send Message"}
               </Button>
             </form>
 
