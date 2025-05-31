@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Portfolio-specific colors
+				dark: {
+					bg: '#0a0a0a',
+					card: '#1a1a1a',
+					border: '#2a2a2a'
+				},
+				cyan: {
+					DEFAULT: '#00bcd4',
+					50: '#e6fbfc',
+					100: '#ccf7f9',
+					200: '#99eff3',
+					300: '#66e7ed',
+					400: '#33dfe7',
+					500: '#00bcd4',
+					600: '#0096aa',
+					700: '#007180',
+					800: '#004b55',
+					900: '#00262b'
 				}
 			},
 			borderRadius: {
@@ -84,11 +107,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'slide-in': {
+					'0%': { opacity: '0', transform: 'translateX(-20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-in': 'slide-in 0.6s ease-out'
 			}
 		}
 	},
