@@ -1,12 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-
 export default function Home() {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -36,26 +33,13 @@ export default function Home() {
 
             {/* Social Links */}
             <div className="flex justify-center space-x-6">
-              <a 
-                href="https://linkedin.com/in/bhavyamanasa-patta-193647291" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
+              <a href="https://linkedin.com/in/bhavyamanasa-patta-193647291" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a 
-                href="https://github.com/bhavyamanasa" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
+              <a href="https://github.com/bhavyamanasa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              <a 
-                href="mailto:bhavyamanasap@mail.com"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
+              <a href="mailto:bhavyamanasap@mail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
@@ -64,24 +48,7 @@ export default function Home() {
       </section>
 
       {/* Quick Stats Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="glass-effect p-8 text-center">
-              <h3 className="text-3xl font-bold text-cyan-400 mb-2">3+</h3>
-              <p className="text-gray-300">Years Experience</p>
-            </Card>
-            <Card className="glass-effect p-8 text-center">
-              <h3 className="text-3xl font-bold text-cyan-400 mb-2">15+</h3>
-              <p className="text-gray-300">Projects Completed</p>
-            </Card>
-            <Card className="glass-effect p-8 text-center">
-              <h3 className="text-3xl font-bold text-cyan-400 mb-2">5+</h3>
-              <p className="text-gray-300">Technologies Mastered</p>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Featured Work Preview */}
       <section className="py-20 px-4 bg-dark-card/50">
@@ -136,6 +103,5 @@ export default function Home() {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 }
