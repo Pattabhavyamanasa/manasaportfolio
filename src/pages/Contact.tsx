@@ -1,4 +1,3 @@
-
 import { Mail, MapPin, Phone, Linkedin, Github, Send } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -31,7 +30,7 @@ export default function Contact() {
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_email: 'bhavyamanasap@mail.com'
+          to_email: 'bhavyamanasap@gmail.com'
         },
         'kcnmH8ywDeOXKlPN8' // public key
       );
@@ -100,10 +99,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-cyan-400 mb-1">Email</h3>
                     <a 
-                      href="mailto:bhavyamanasap@mail.com"
+                      href="mailto:bhavyamanasap@gmail.com"
                       className="text-gray-300 hover:text-cyan-400 transition-colors"
                     >
-                      bhavyamanasap@mail.com
+                      bhavyamanasap@gmail.com
                     </a>
                   </div>
                 </div>
