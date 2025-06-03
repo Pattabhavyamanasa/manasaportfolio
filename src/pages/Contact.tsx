@@ -270,7 +270,7 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-cyan-500 hover:bg-cyan-600">
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/resume" target="_blank" rel="noopener noreferrer">
                   Download Resume
                 </a>
               </Button>
