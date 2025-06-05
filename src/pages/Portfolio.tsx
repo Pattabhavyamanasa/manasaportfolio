@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Filter, Star, Clock, CheckCircle, Code, Database, Brain, Globe } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,38 +5,38 @@ import { useState, useEffect } from "react";
 
 const projects = [{
   title: "Pet Adoption Platform",
-  description: "A comprehensive MERN stack application that connects pets with loving families. Features include user authentication, pet profiles, adoption requests, and admin dashboard.",
-  technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+  description: "A dynamic pet adoption website enabling users to browse, search and inquire about adoptable pets. Features robust user authentication with MongoDB for pet listings and user information management.",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Authentication"],
   github: "https://github.com/bhavyamanasa/pet-adoption",
-  live: "https://pet-adoption-demo.netlify.app",
+  live: "",
   status: "Completed",
   category: "Full Stack",
   featured: true,
   image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=400&fit=crop"
 }, {
-  title: "Smart Agriculture ML",
-  description: "Machine learning solution for crop prediction and yield optimization. Uses various ML algorithms to analyze soil conditions, weather patterns, and historical data.",
-  technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Flask", "ML Algorithms"],
+  title: "Smart Agriculture NPK Prediction",
+  description: "ML project implementing Decision tree and linear regression to predict NPK levels in soil with 90% accuracy. Integrated MongoDB and Flask for efficient data management and real-time prediction pipeline.",
+  technologies: ["Python", "Scikit-learn", "Decision Tree", "Linear Regression", "Flask", "MongoDB"],
   github: "https://github.com/bhavyamanasa/smart-agriculture",
   live: "",
-  status: "Hackathon Project",
+  status: "Completed",
   category: "Machine Learning",
   featured: true,
   image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&h=400&fit=crop"
 }, {
-  title: "Event Management System",
-  description: "Full-stack MERN application for event planning and management. Features event creation, booking system, payment integration, and real-time notifications.",
-  technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Stripe API"],
-  github: "https://github.com/bhavyamanasa/event-management",
+  title: "Zomato Clone",
+  description: "Feature-rich Zomato clone developed using MERN stack. Includes restaurant discovery, menu browsing, secure user authentication, and order placement functionality.",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "MERN Stack", "Authentication"],
+  github: "https://github.com/bhavyamanasa/zomato-clone",
   live: "",
-  status: "In Progress",
+  status: "Completed",
   category: "Full Stack",
   featured: false,
-  image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=400&fit=crop"
+  image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=400&fit=crop"
 }, {
-  title: "Weather App",
-  description: "Responsive weather application with real-time weather data, 5-day forecast, location-based services, and beautiful UI with weather animations.",
-  technologies: ["React", "OpenWeather API", "CSS3", "Geolocation API"],
+  title: "Weather Prediction App",
+  description: "Responsive weather application with real-time weather data, location-based services, and beautiful UI with weather animations for enhanced user experience.",
+  technologies: ["React", "Weather API", "CSS3", "Geolocation API", "JavaScript"],
   github: "https://github.com/bhavyamanasa/weather-app",
   live: "https://weather-app-bhavya.netlify.app",
   status: "Completed",
@@ -45,25 +44,25 @@ const projects = [{
   featured: false,
   image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=400&fit=crop"
 }, {
-  title: "Fake Profile Detection ML",
-  description: "Machine learning model to detect fake social media profiles using various features like profile completeness, posting patterns, and network analysis.",
-  technologies: ["Python", "Scikit-learn", "Natural Language Processing", "Data Analysis"],
-  github: "https://github.com/bhavyamanasa/fake-profile-detection",
+  title: "Machine Learning Portfolio",
+  description: "Collection of ML projects showcasing Deep Learning, NLP, Computer Vision, and both Supervised and Unsupervised Learning techniques with high accuracy metrics.",
+  technologies: ["Python", "TensorFlow", "Keras", "Deep Learning", "NLP", "Computer Vision"],
+  github: "https://github.com/bhavyamanasa/ml-portfolio",
   live: "",
-  status: "Completed",
+  status: "In Progress",
   category: "Machine Learning",
   featured: false,
-  image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&h=400&fit=crop"
+  image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop"
 }, {
-  title: "Tic Tac Toe Game",
-  description: "Interactive Tic Tac Toe game with AI opponent, score tracking, different difficulty levels, and smooth animations. Built with vanilla JavaScript.",
-  technologies: ["JavaScript", "HTML5", "CSS3", "Game Logic", "AI Algorithm"],
-  github: "https://github.com/bhavyamanasa/tic-tac-toe",
-  live: "https://tic-tac-toe-bhavya.netlify.app",
-  status: "Completed",
-  category: "Frontend",
+  title: "Task Management System",
+  description: "Full-stack task management application with user authentication, task categorization, priority levels, and collaborative features for team productivity.",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Real-time Updates"],
+  github: "https://github.com/bhavyamanasa/task-manager",
+  live: "",
+  status: "In Progress",
+  category: "Full Stack",
   featured: false,
-  image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=800&h=400&fit=crop"
+  image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=400&fit=crop"
 }];
 
 const categories = ["All", "Full Stack", "Machine Learning", "Frontend"];
@@ -378,13 +377,13 @@ export default function Portfolio() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 hover:shadow-lg hover:shadow-cyan-500/25 transition-all transform hover:scale-105">
-                    <a href="mailto:bhavyamanasap@mail.com">
+                    <a href="mailto:bhavyamanasap@gmail.com">
                       Get In Touch
                     </a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-cyan-500/50 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all transform hover:scale-105">
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                      Download Resume
+                    <a href="/resume" rel="noopener noreferrer">
+                      View Resume
                     </a>
                   </Button>
                 </div>
