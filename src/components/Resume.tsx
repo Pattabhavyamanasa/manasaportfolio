@@ -5,8 +5,13 @@ import { Card } from "@/components/ui/card";
 
 export default function Resume() {
   const handleDownload = () => {
-    // Create a printable version
-    window.print();
+    // Download the actual PDF file
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/40dae8eb-ab86-4c1a-a517-b69221102064.png';
+    link.download = 'Bhavya_Manasa_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -166,7 +171,7 @@ export default function Resume() {
       <div className="text-center print:hidden">
         <Button onClick={handleDownload} className="bg-cyan-500 hover:bg-cyan-600 text-white">
           <Download className="h-4 w-4 mr-2" />
-          Download as PDF
+          Download Resume PDF
         </Button>
       </div>
     </div>
