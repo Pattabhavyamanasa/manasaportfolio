@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Filter, Star, Clock, CheckCircle, Code, Database, Brain, Globe } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,8 +7,8 @@ const projects = [{
   title: "Pet Adoption Platform",
   description: "A comprehensive MERN stack application that connects pets with loving families. Features include user authentication, pet profiles, adoption requests, and admin dashboard.",
   technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-  github: "https://github.com/bhavyamanasa/pet-adoption",
-  live: "https://pet-adoption-demo.netlify.app",
+  github: "https://github.com/Pattabhavyamanasa/Pet-adoption-platform.git",
+  live: "",
   status: "Completed",
   category: "Full Stack",
   featured: true,
@@ -18,7 +17,7 @@ const projects = [{
   title: "Smart Agriculture ML",
   description: "Machine learning solution for crop prediction and yield optimization. Uses various ML algorithms to analyze soil conditions, weather patterns, and historical data.",
   technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Flask", "ML Algorithms"],
-  github: "https://github.com/bhavyamanasa/smart-agriculture",
+  github: "https://github.com/Pattabhavyamanasa/SMART-AGRICULTURE.git",
   live: "",
   status: "Hackathon Project",
   category: "Machine Learning",
@@ -39,7 +38,7 @@ const projects = [{
   description: "Responsive weather application with real-time weather data, 5-day forecast, location-based services, and beautiful UI with weather animations.",
   technologies: ["React", "OpenWeather API", "CSS3", "Geolocation API"],
   github: "https://github.com/bhavyamanasa/weather-app",
-  live: "https://weather-app-bhavya.netlify.app",
+  live: "",
   status: "Completed",
   category: "Frontend",
   featured: false,
@@ -48,7 +47,7 @@ const projects = [{
   title: "Fake Profile Detection ML",
   description: "Machine learning model to detect fake social media profiles using various features like profile completeness, posting patterns, and network analysis.",
   technologies: ["Python", "Scikit-learn", "Natural Language Processing", "Data Analysis"],
-  github: "https://github.com/bhavyamanasa/fake-profile-detection",
+  github: "https://github.com/Pattabhavyamanasa/FAKE_PROFILE_SOURCE_CODE.git",
   live: "",
   status: "Completed",
   category: "Machine Learning",
@@ -59,7 +58,7 @@ const projects = [{
   description: "Interactive Tic Tac Toe game with AI opponent, score tracking, different difficulty levels, and smooth animations. Built with vanilla JavaScript.",
   technologies: ["JavaScript", "HTML5", "CSS3", "Game Logic", "AI Algorithm"],
   github: "https://github.com/bhavyamanasa/tic-tac-toe",
-  live: "https://tic-tac-toe-bhavya.netlify.app",
+  live: "",
   status: "Completed",
   category: "Frontend",
   featured: false,
@@ -225,13 +224,6 @@ export default function Portfolio() {
                             <Github className="h-4 w-4" />
                           </a>
                         </Button>
-                        {project.live && (
-                          <Button asChild size="sm" className="bg-cyan-500/80 backdrop-blur-sm hover:bg-cyan-600/80">
-                            <a href={project.live} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="h-4 w-4" />
-                            </a>
-                          </Button>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -266,18 +258,9 @@ export default function Portfolio() {
                       <Button asChild variant="outline" size="sm" className="border-cyan-500/50 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all">
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center">
                           <Github className="h-4 w-4 mr-2" />
-                          Code
+                          View Code
                         </a>
                       </Button>
-                      
-                      {project.live && (
-                        <Button asChild size="sm" className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 hover:shadow-lg hover:shadow-cyan-500/25 transition-all">
-                          <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            Live Demo
-                          </a>
-                        </Button>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -348,15 +331,6 @@ export default function Portfolio() {
                           Code
                         </a>
                       </Button>
-                      
-                      {project.live && (
-                        <Button asChild size="sm" className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-xs">
-                          <a href={project.live} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-3 w-3 mr-1" />
-                            Demo
-                          </a>
-                        </Button>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -383,8 +357,8 @@ export default function Portfolio() {
                     </a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-cyan-500/50 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all transform hover:scale-105">
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                      Download Resume
+                    <a href="/resume" rel="noopener noreferrer">
+                      View Resume
                     </a>
                   </Button>
                 </div>
