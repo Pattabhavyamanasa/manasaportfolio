@@ -57,7 +57,7 @@ export default function Resume() {
             <div></div>
             <div>SSC-Vikash Model</div>
             <div>2019</div>
-            <div>8.5</div>
+            <div>9.5</div>
           </div>
         </div>
       </section>
@@ -99,7 +99,17 @@ export default function Resume() {
         <div className="space-y-6">
           <div>
             <div className="flex justify-between items-start mb-2">
-              <h4 className="text-lg font-semibold text-blue-600">Smart Agriculture Soil NPK Level Prediction ML project</h4>
+              <div className="flex items-center gap-2">
+                <h4 className="text-lg font-semibold text-blue-600">Smart Agriculture Soil NPK Level Prediction ML project</h4>
+                <a 
+                  href="https://github.com/Pattabhavyamanasa/SMART-AGRICULTURE.git" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              </div>
               <span className="text-sm text-gray-600 italic">Mar-Apr 2023</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm ml-4">
@@ -121,7 +131,17 @@ export default function Resume() {
           
           <div>
             <div className="flex justify-between items-start mb-2">
-              <h4 className="text-lg font-semibold text-blue-600">Pet Adoption Platform, Adopt pets through website(Full-Stack project)</h4>
+              <div className="flex items-center gap-2">
+                <h4 className="text-lg font-semibold text-blue-600">Pet Adoption Platform, Adopt pets through website(Full-Stack project)</h4>
+                <a 
+                  href="https://github.com/Pattabhavyamanasa/Pet-adoption-platform.git" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              </div>
               <span className="text-sm text-gray-600 italic">Sep-Dec 2023</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm ml-4">
