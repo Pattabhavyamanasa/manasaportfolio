@@ -36,18 +36,18 @@ export default function Resume() {
             <div className="font-semibold">Specialization</div>
             <div className="font-semibold">Institute</div>
             <div className="font-semibold">Year</div>
-            <div className="font-semibold">CGP</div>
+            <div className="font-semibold">CGPA</div>
           </div>
           <div className="grid grid-cols-5 gap-4 text-sm">
             <div>B.Tech</div>
-            <div>Cse(AI and ML)</div>
+            <div>CSE(AI and ML)</div>
             <div>KIET-Wakinada</div>
             <div>2022-Present</div>
             <div>7.5</div>
           </div>
           <div className="grid grid-cols-5 gap-4 text-sm">
             <div>MPC</div>
-            <div>(mathematics,physics)</div>
+            <div>(Mathematics, Physics)</div>
             <div>Oxford Junior College</div>
             <div>2021</div>
             <div>9.5</div>
@@ -103,7 +103,7 @@ export default function Resume() {
               <span className="text-sm text-gray-600 italic">Mar-Apr 2023</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm ml-4">
-              <li>Implemented and optimized Decision tree and linear regression to predict NPK levels in soil with 89% accuracy.Integrated MongoDB and Flask for efficient data management and deployment.</li>
+              <li>Implemented and optimized Decision tree and linear regression to predict NPK levels in soil with 89% accuracy. Integrated MongoDB and Flask for efficient data management and deployment.</li>
               <li>Built a robust real-time prediction pipeline utilizing MongoDB for data storage and Flask for web integration.</li>
             </ul>
           </div>
@@ -125,7 +125,7 @@ export default function Resume() {
               <span className="text-sm text-gray-600 italic">Sep-Dec 2023</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm ml-4">
-              <li>Engineered a dynamic pet adoption website, enabling users to browse, search and inquire about adoptable pets.Highly user-centric interface that provides a seamless user experience for connecting pets.</li>
+              <li>Engineered a dynamic pet adoption website, enabling users to browse, search and inquire about adoptable pets. Highly user-centric interface that provides a seamless user experience for connecting pets.</li>
               <li>Implemented robust data management with MongoDB to store and retrieve pet listings and user information; handled adoption requests effectively.</li>
             </ul>
           </div>
@@ -143,7 +143,7 @@ export default function Resume() {
           </div>
           <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm ml-4">
             <li>Led a 5-member team to develop an ML-based crop prediction system</li>
-            <li>Conducted research on suitable ML models and data preprocessing strategies.Coordinated with mentors extensively to ensure project milestones and deliverables were met.</li>
+            <li>Conducted research on suitable ML models and data preprocessing strategies. Coordinated with mentors extensively to ensure project milestones and deliverables were met.</li>
           </ul>
         </div>
       </section>
@@ -170,7 +170,7 @@ export default function Resume() {
           </div>
           <div>
             <span className="font-semibold text-gray-800">Tools: </span>
-            <span className="text-gray-700">Git, GitHub, VS Code, Heroku, Netlify, Jupyter Notebook, LaTeX,Docker, Postman</span>
+            <span className="text-gray-700">Git, GitHub, VS Code, Heroku, Netlify, Jupyter Notebook, LaTeX, Docker, Postman</span>
           </div>
           <div>
             <span className="font-semibold text-gray-800">Frameworks/Libraries: </span>
@@ -178,7 +178,7 @@ export default function Resume() {
           </div>
           <div>
             <span className="font-semibold text-gray-800">Databases: </span>
-            <span className="text-gray-700">MongoDB,SQL</span>
+            <span className="text-gray-700">MongoDB, SQL</span>
           </div>
         </div>
       </section>
@@ -189,7 +189,7 @@ export default function Resume() {
         
         <div className="space-y-2 text-sm">
           <div>• <strong>Infosys</strong> – AWS Certified Machine Learning</div>
-          <div>• <strong>Ibm</strong> – Python for Data Science certification</div>
+          <div>• <strong>IBM</strong> – Python for Data Science certification</div>
         </div>
       </section>
 
