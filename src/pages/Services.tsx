@@ -158,29 +158,6 @@ export default function Services() {
             </Card>
           </div>
         </section>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <Card className="glass-effect p-8 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
-            <p className="text-gray-400 mb-6">
-              Let's discuss your ideas and turn them into reality. I'm here to help you build 
-              something extraordinary that meets your business goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-cyan-500 hover:bg-cyan-600">
-                <a href="mailto:bhavyamanasap@mail.com">
-                  Start a Project
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="tel:+919949959288">
-                  Schedule a Call
-                </a>
-              </Button>
-            </div>
-          </Card>
-        </div>
       </div>
     </div>
   );
